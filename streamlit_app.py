@@ -1,7 +1,6 @@
 import os
 import streamlit as st
 from dotenv import load_dotenv
-
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain_community.document_loaders import PyPDFLoader
@@ -94,3 +93,4 @@ if "vectorstore" in st.session_state:
         except Exception as e:
             st.error("❌ LLM failed to generate a response.")
             st.exception(e)
+
